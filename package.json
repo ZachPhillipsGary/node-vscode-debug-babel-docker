@@ -1,0 +1,36 @@
+{
+  "name": "node-vscode-debug-babel-docker",
+  "version": "1.0.0",
+  "description": "node app with nodemon vscode debug. babel & docker",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon --nolazy --require babel-register --inspect=0.0.0.0:9229 src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./build/index.js"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "author": "Aner Cohen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.19.1"
+  }
+}

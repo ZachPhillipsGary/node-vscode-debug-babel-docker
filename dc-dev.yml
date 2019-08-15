@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  node-vscode-debug-babel-docker-dev:
+    container_name: node-vscode-debug-babel-docker-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: always
+    ports:
+      - "8080:8080"
+      - "9229:9229"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    command: npm run debug
