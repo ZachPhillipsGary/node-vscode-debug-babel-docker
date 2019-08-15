@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 app.get("/check", (request, response) => {
-  response.send(200);
+  response.sendStatus(200);
 });
 
 const onUncaughtException = err => {
