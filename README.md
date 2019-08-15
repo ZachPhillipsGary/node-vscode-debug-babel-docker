@@ -1,4 +1,3 @@
-node-vscode-debug-babel-docker
 Containerized Node.js &amp; Babel with vscode debug
 
 ## Debug
